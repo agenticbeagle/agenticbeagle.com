@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,10 +97,6 @@
       color: var(--bg-paper);
     }
 
-    /* Bilingual Toggle Visibility */
-    html[data-lang="en"] [data-i18n="nl"] { display: none !important; }
-    html[data-lang="nl"] [data-i18n="en"] { display: none !important; }
-
     /* Exposed Architectural Grid Container */
     .page-frame {
       max-width: var(--max-w);
@@ -172,40 +168,6 @@
 
     .masthead-nav a:hover .mono-label {
       color: var(--accent-rust);
-    }
-
-    .masthead-right {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1.25rem;
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      border: 1px solid var(--border-hairline);
-      background: var(--bg-sand);
-      border-radius: 4px;
-      overflow: hidden;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-    }
-
-    .lang-btn {
-      border: none;
-      background: transparent;
-      padding: 0.25rem 0.5rem;
-      cursor: pointer;
-      color: var(--text-muted);
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: 500;
-      transition: all 0.15s ease;
-    }
-
-    .lang-btn.active {
-      background: var(--bg-ink);
-      color: var(--bg-paper);
     }
 
     /* Shared Section Index */
@@ -372,17 +334,10 @@
       </a>
 
       <nav class="masthead-nav" aria-label="Sections">
-        <a href="./#thesis"><span class="mono-label" data-i18n="en">Thesis</span><span class="mono-label" data-i18n="nl">Visie</span></a>
-        <a href="./#products"><span class="mono-label" data-i18n="en">Products</span><span class="mono-label" data-i18n="nl">Producten</span></a>
+        <a href="./#thesis"><span class="mono-label">Thesis</span></a>
+        <a href="./#products"><span class="mono-label">Products</span></a>
         <a href="./#contact"><span class="mono-label">Contact</span></a>
       </nav>
-
-      <div class="masthead-right">
-        <div class="lang-switch" role="group" aria-label="Language selector">
-          <button type="button" class="lang-btn active" data-set-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-set-lang="nl">NL</button>
-        </div>
-      </div>
     </header>
 
     <main>
@@ -392,79 +347,62 @@
           <span class="mono-label tag-rust">PRIVACY</span>
         </div>
 
-        <h1 class="editorial-headline" data-i18n="en">We don't <em>track</em> you.</h1>
-        <h1 class="editorial-headline" data-i18n="nl">Wij <em>volgen</em> je niet.</h1>
+        <h1 class="editorial-headline">We don't <em>track</em> you.</h1>
 
-        <p class="hero-lead" data-i18n="en">
+        <p class="hero-lead">
           No cookies, no analytics, no trackers. This is the little this site does process, and why.
         </p>
-        <p class="hero-lead" data-i18n="nl">
-          Geen cookies, geen analytics, geen trackers. Dit is het weinige dat deze site wel verwerkt, en waarom.
-        </p>
 
-        <span class="mono-label" data-i18n="en">LAST UPDATED 23 OCTOBER 2026</span>
-        <span class="mono-label" data-i18n="nl">BIJGEWERKT 23 OKTOBER 2026</span>
+        <span class="mono-label">LAST UPDATED 23 OCTOBER 2026</span>
       </section>
 
       <!-- NUMBERED SECTIONS -->
       <section>
         <div class="privacy-row">
           <span class="row-num">01</span>
-          <h2 data-i18n="en">Who we are</h2>
-          <h2 data-i18n="nl">Wie we zijn</h2>
+          <h2>Who we are</h2>
           <div class="privacy-text">
-            <p data-i18n="en">This is the website of AgenticBeagle, an independent product studio in De Rotterdam, Rotterdam. We are responsible for the data described on this page. Questions? Mail <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a>.</p>
-            <p data-i18n="nl">Dit is de website van AgenticBeagle, een zelfstandige productstudio in De Rotterdam, Rotterdam. Wij zijn verantwoordelijk voor de gegevens die op deze pagina staan beschreven. Vragen? Mail naar <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a>.</p>
+            <p>This is the website of AgenticBeagle, an independent product studio in De Rotterdam, Rotterdam. We are responsible for the data described on this page. Questions? Mail <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a>.</p>
           </div>
         </div>
 
         <div class="privacy-row">
           <span class="row-num">02</span>
-          <h2 data-i18n="en">No cookies, no trackers</h2>
-          <h2 data-i18n="nl">Geen cookies, geen trackers</h2>
+          <h2>No cookies, no trackers</h2>
           <div class="privacy-text">
-            <p data-i18n="en">This site sets no cookies, uses no analytics and loads nothing from other companies: the fonts and images are part of the page itself. The only thing stored in your browser is your language choice (EN or NL), so the site remembers it next time. It stays on your device.</p>
-            <p data-i18n="nl">Deze site plaatst geen cookies, gebruikt geen analytics en laadt niets van andere bedrijven: de lettertypes en afbeeldingen zitten in de pagina zelf. Het enige dat in je browser wordt bewaard, is je taalkeuze (EN of NL), zodat de site die de volgende keer onthoudt. Die blijft op je apparaat.</p>
+            <p>This site sets no cookies, uses no analytics and stores nothing in your browser. It also loads nothing from other companies: the fonts and images are part of the page itself.</p>
           </div>
         </div>
 
         <div class="privacy-row">
           <span class="row-num">03</span>
-          <h2 data-i18n="en">Hosting by GitHub</h2>
-          <h2 data-i18n="nl">Hosting bij GitHub</h2>
+          <h2>Hosting by GitHub</h2>
           <div class="privacy-text">
-            <p data-i18n="en">This site runs on GitHub Pages, a service of GitHub. When you visit, GitHub logs your IP address for security purposes; we can't see these logs ourselves. GitHub may process this data in the United States and complies with the EU-U.S. Data Privacy Framework. How long GitHub keeps it is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
-            <p data-i18n="nl">Deze site draait op GitHub Pages, een dienst van GitHub. Bij elk bezoek legt GitHub je IP-adres vast voor beveiliging; wij kunnen die gegevens zelf niet inzien. GitHub kan ze in de Verenigde Staten verwerken en houdt zich aan het EU-VS Data Privacy Framework. Hoe lang GitHub ze bewaart, staat in de <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">privacyverklaring van GitHub</a>.</p>
+            <p>This site runs on GitHub Pages, a service of GitHub. When you visit, GitHub logs your IP address for security purposes; we can't see these logs ourselves. GitHub may process this data in the United States and complies with the EU-U.S. Data Privacy Framework. How long GitHub keeps it is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
           </div>
         </div>
 
         <div class="privacy-row">
           <span class="row-num">04</span>
-          <h2 data-i18n="en">Email</h2>
-          <h2 data-i18n="nl">E-mail</h2>
+          <h2>Email</h2>
           <div class="privacy-text">
-            <p data-i18n="en">If you email us, we use your email address and message only to reply. We don't put you on a mailing list and don't share your message with anyone. We keep the conversation as long as needed to help you, and delete it when you ask.</p>
-            <p data-i18n="nl">Mail je ons, dan gebruiken we je e-mailadres en bericht alleen om te antwoorden. We zetten je niet op een mailinglijst en delen je bericht met niemand. We bewaren het gesprek zolang dat nodig is om je te helpen, en verwijderen het als je daarom vraagt.</p>
+            <p>If you email us, we use your email address and message only to reply. We don't put you on a mailing list and don't share your message with anyone. We keep the conversation as long as needed to help you, and delete it when you ask.</p>
           </div>
         </div>
 
         <div class="privacy-row">
           <span class="row-num">05</span>
-          <h2 data-i18n="en">Our apps</h2>
-          <h2 data-i18n="nl">Onze apps</h2>
+          <h2>Our apps</h2>
           <div class="privacy-text">
-            <p data-i18n="en">This page covers the website only. Each of our apps has its own privacy policy, which you'll find with the app in the App Store.</p>
-            <p data-i18n="nl">Deze pagina gaat alleen over de website. Elk van onze apps heeft een eigen privacybeleid, dat je bij de app in de App Store vindt.</p>
+            <p>This page covers the website only. Each of our apps has its own privacy policy, which you'll find with the app in the App Store.</p>
           </div>
         </div>
 
         <div class="privacy-row">
           <span class="row-num">06</span>
-          <h2 data-i18n="en">Your rights</h2>
-          <h2 data-i18n="nl">Je rechten</h2>
+          <h2>Your rights</h2>
           <div class="privacy-text">
-            <p data-i18n="en">You can ask us which of your data we have, and have it corrected or deleted. Mail <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a> and we'll answer within a month. Not happy with how we handle it? You can file a complaint with the Dutch Data Protection Authority, the <a href="https://autoriteitpersoonsgegevens.nl" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
-            <p data-i18n="nl">Je kunt ons vragen welke gegevens we van je hebben, en ze laten verbeteren of verwijderen. Mail naar <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a>, dan antwoorden we binnen een maand. Niet tevreden over hoe we ermee omgaan? Dan kun je een klacht indienen bij de <a href="https://autoriteitpersoonsgegevens.nl" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
+            <p>You can ask us which of your data we have, and have it corrected or deleted. Mail <a href="mailto:hello@agenticbeagle.com">hello@agenticbeagle.com</a> and we'll answer within a month. Not happy with how we handle it? You can file a complaint with the Dutch Data Protection Authority, the <a href="https://autoriteitpersoonsgegevens.nl" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
           </div>
         </div>
       </section>
@@ -476,29 +414,5 @@
     </footer>
 
   </div>
-
-  <!-- Minimal, zero-dependency script for instant EN/NL switching (shares the choice with the main page) -->
-  <script>
-    (function() {
-      const buttons = document.querySelectorAll('[data-set-lang]');
-      const root = document.documentElement;
-
-      function setLang(lang) {
-        root.setAttribute('data-lang', lang);
-        root.setAttribute('lang', lang);
-        buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-set-lang') === lang));
-        try { localStorage.setItem('abLang', lang); } catch (err) {}
-      }
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => setLang(btn.getAttribute('data-set-lang')));
-      });
-
-      try {
-        const saved = localStorage.getItem('abLang');
-        if (saved === 'en' || saved === 'nl') setLang(saved);
-      } catch (err) {}
-    })();
-  </script>
 </body>
 </html>
