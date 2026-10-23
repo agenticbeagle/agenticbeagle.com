@@ -181,14 +181,6 @@
       font-weight: 600;
     }
 
-    .brand-tagline {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      border-left: 1px solid var(--border-strong);
-      padding-left: 0.75rem;
-    }
-
     .masthead-nav {
       display: flex;
       gap: 1.75rem;
@@ -208,35 +200,6 @@
       align-items: center;
       justify-content: flex-end;
       gap: 1.25rem;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.3rem 0.65rem;
-      background-color: var(--accent-sage-soft);
-      border: 1px solid rgba(45, 74, 62, 0.22);
-      border-radius: 999px;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      color: var(--accent-sage);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: var(--accent-sage);
-      animation: pulse 2.8s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(0.88); }
     }
 
     .lang-switch {
@@ -697,46 +660,6 @@
       color: var(--accent-rust);
     }
 
-    /* Studio Tenets (4-Column Strip) */
-    .tenets-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-bottom: 1px solid var(--border-hairline);
-      background-color: var(--bg-paper);
-    }
-
-    .tenet-cell {
-      padding: 2.5rem 2rem;
-      border-right: 1px solid var(--border-hairline);
-    }
-
-    .tenet-cell:last-child {
-      border-right: none;
-    }
-
-    .tenet-num {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.35rem;
-      color: var(--accent-rust);
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .tenet-title {
-      font-family: var(--font-sans);
-      font-size: 0.98rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--text-primary);
-    }
-
-    .tenet-desc {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
     /* Section 04: Colophon & Independence, with the office */
     .colophon-grid {
       display: grid;
@@ -872,25 +795,11 @@
       .colophon-statement {
         border-bottom-color: rgba(246, 244, 238, 0.14);
       }
-      .tenets-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .tenet-cell:nth-child(2) {
-        border-right: none;
-      }
-      .tenet-cell:nth-child(1),
-      .tenet-cell:nth-child(2) {
-        border-bottom: 1px solid var(--border-hairline);
-      }
     }
 
     @media (max-width: 600px) {
       header.masthead {
         padding: 1rem;
-      }
-      .brand-tagline,
-      .status-pill {
-        display: none;
       }
       .hero-main,
       .diptych-col,
@@ -909,13 +818,8 @@
         display: none;
       }
       .hero-meta-bar,
-      .tenets-grid,
       .colophon-specs {
         grid-template-columns: 1fr;
-      }
-      .tenet-cell {
-        border-right: none;
-        border-bottom: 1px solid var(--border-hairline);
       }
       .collage .callout,
       .kennel-figure .callout {
@@ -947,7 +851,6 @@
     <header class="masthead">
       <a href="#top" class="brand-lockup">
         <span class="brand-name">agenticbeagle<span class="brand-dot">.</span></span>
-        <span class="brand-tagline">sniffs out good ideas</span>
       </a>
 
       <nav class="masthead-nav" aria-label="Sections">
@@ -957,12 +860,6 @@
       </nav>
 
       <div class="masthead-right">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span data-i18n="en">2 IN THE KENNEL</span>
-          <span data-i18n="nl">2 IN DE KENNEL</span>
-        </div>
-
         <div class="lang-switch" role="group" aria-label="Language selector">
           <button type="button" class="lang-btn active" data-set-lang="en">EN</button>
           <button type="button" class="lang-btn" data-set-lang="nl">NL</button>
@@ -1268,41 +1165,6 @@
             <span class="step-meta" data-i18n="nl">CIJFERS</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- STUDIO TENETS -->
-    <section class="tenets-grid">
-      <div class="tenet-cell">
-        <span class="tenet-num">I.</span>
-        <div class="tenet-title" data-i18n="en">Curious</div>
-        <div class="tenet-title" data-i18n="nl">Nieuwsgierig</div>
-        <p class="tenet-desc" data-i18n="en">We follow the scent of real problems — the work worth doing.</p>
-        <p class="tenet-desc" data-i18n="nl">We volgen het spoor van echte problemen — het werk dat ertoe doet.</p>
-      </div>
-
-      <div class="tenet-cell">
-        <span class="tenet-num">II.</span>
-        <div class="tenet-title" data-i18n="en">Relentless</div>
-        <div class="tenet-title" data-i18n="nl">Volhardend</div>
-        <p class="tenet-desc" data-i18n="en">Once we lock onto a trail, we don't let go until it's found.</p>
-        <p class="tenet-desc" data-i18n="nl">Hebben we een spoor te pakken, dan laten we pas los als het gevonden is.</p>
-      </div>
-
-      <div class="tenet-cell">
-        <span class="tenet-num">III.</span>
-        <div class="tenet-title" data-i18n="en">Good Company</div>
-        <div class="tenet-title" data-i18n="nl">Goed Gezelschap</div>
-        <p class="tenet-desc" data-i18n="en">Nose down and persistent — and friendly the whole way through.</p>
-        <p class="tenet-desc" data-i18n="nl">Neus omlaag en vasthoudend — en de hele weg vriendelijk.</p>
-      </div>
-
-      <div class="tenet-cell">
-        <span class="tenet-num">IV.</span>
-        <div class="tenet-title" data-i18n="en">Built Well</div>
-        <div class="tenet-title" data-i18n="nl">Goed Gebouwd</div>
-        <p class="tenet-desc" data-i18n="en">Small tools. Real problems. Sniffed out, then built well.</p>
-        <p class="tenet-desc" data-i18n="nl">Kleine tools. Echte problemen. Opgesnuffeld, en dan goed gebouwd.</p>
       </div>
     </section>
 
