@@ -23,13 +23,19 @@ De website van AgenticBeagle. Hij staat op GitHub Pages: de branch `main`, map `
 
 ## Werkwijze
 
-- `main` is live: wat in `main` komt, staat binnen een minuut op agenticbeagle.com.
-- Elke wijziging op een eigen branch, met een korte Engelse naam in kebab-case. Nooit rechtstreeks op `main` werken en nooit force-pushen.
-- Begin elke taak met `git switch main` en `git pull --ff-only`: de ander kan intussen iets live hebben gezet.
-- Committen en mergen alleen op uitdrukkelijke opdracht van wie aan het werk is ("commit", "merge"). Nooit uit eigen beweging.
-- Merge betekent: `main` ophalen; is `main` intussen veranderd, dan eerst de branch op `main` rebasen; dan fast-forward naar `main`, `main` pushen en de branch lokaal weghalen. Alleen `main` gaat naar GitHub; branches blijven lokaal.
-- Zeg na een merge in gewone taal wat er live is gekomen.
-- Bekijken: `python3 -m http.server 8000` in deze map, dan http://localhost:8000/. Met `open index.html` gaat het ook, maar dan werkt de link van de privacypagina terug naar de voorpagina niet.
+`main` is live: wat in `main` komt, staat binnen een minuut op agenticbeagle.com. Daarom gaat elke wijziging zo:
+
+1. **Begin:** `git switch main` en `git pull --ff-only`; de ander kan intussen iets live hebben gezet. Maak dan een branch met een korte Engelse naam in kebab-case, bijvoorbeeld `new-intro-text`. Eén wijziging per branch; nooit rechtstreeks op `main` werken.
+2. **Maken en bekijken:** pas de bestanden aan en bekijk het resultaat met `python3 -m http.server 8000` in deze map (http://localhost:8000/): beide pagina's, op desktopbreedte en op 375 px. Vertel wat er veranderd is.
+3. **"commit":** alleen op opdracht van wie aan het werk is, nooit uit eigen beweging. Commit op de branch, met een Nederlandse boodschap die zegt wat er veranderd is en waarom.
+4. **"merge":** ook alleen op opdracht. Haal `main` op; is `main` intussen veranderd, rebase dan eerst de branch op `main`. Dan fast-forward naar `main`, `main` pushen en de branch weghalen. Branches blijven lokaal; alleen `main` gaat naar GitHub.
+5. **Controleren:** kijk een paar minuten na de merge of https://agenticbeagle.com de nieuwe versie toont, en zeg in gewone taal wat er live staat.
+
+**Eerst laten meekijken (optioneel):** vraagt degene die werkt daarom, push dan de branch en open een pull request met een korte uitleg in gewone taal (`gh pr create`). De ander bekijkt hem op GitHub en merget met "Rebase and merge"; GitHub haalt de branch daarna weg. Haal dan lokaal `main` op en verwijder de lokale branch.
+
+**Terugdraaien:** gaat er na een merge iets mis, maak dan een nieuwe branch, draai de foute commit terug met `git revert` en merge die op dezelfde manier. Nooit force-pushen of de geschiedenis van `main` herschrijven; GitHub blokkeert dat ook.
+
+Zonder server kan bekijken ook met `open index.html`, maar dan werkt de link van de privacypagina terug naar de voorpagina niet.
 
 ## Afbeeldingen
 
