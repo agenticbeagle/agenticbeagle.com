@@ -16,6 +16,7 @@ Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbesta
 - Niets van andere servers laden: geen Google Fonts, CDN, analytics, embeds of cookies. Nieuwe afbeeldingen en lettertypes gaan als base64 in de pagina. De privacypagina belooft dat; verandert er iets aan wat de site verwerkt, pas dan ook `docs/privacy.html` aan, met de datum bovenaan.
 - Geen persoonlijke namen, privé-adressen of privé-e-mailadressen, op de site en in commits. Het contactadres is hello@agenticbeagle.com.
 - AgenticBeagle is geen B.V.; schrijf dat nergens.
+- De merknaam staat in kleine letters met punt: `agenticbeagle.` (logo, voettekst, tabbladtitels, deeltitels). In lopende tekst en bij © blijft het `AgenticBeagle`. Verander dat niet zonder te vragen.
 - Commits als `AgenticBeagle <hello@agenticbeagle.com>`, niet onder de eigen accountnaam. Dat staat per kopie in `.git/config`; controleer het met `git config user.name` voor de eerste commit, en zet het na een verse `git clone` eerst:
   ```bash
   git config user.name "AgenticBeagle"
@@ -31,7 +32,7 @@ Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbesta
 2. **Maken en bekijken:** pas de bestanden in `docs/` aan en bekijk het resultaat met `python3 -m http.server 8000 --directory docs` (http://localhost:8000/): beide pagina's, op desktopbreedte en op 375 px. Vertel wat er veranderd is.
 3. **"commit":** alleen op opdracht van wie aan het werk is, nooit uit eigen beweging. Commit op de branch, met een Nederlandse boodschap die zegt wat er veranderd is en waarom.
 4. **"merge":** ook alleen op opdracht. Haal `main` op; is `main` intussen veranderd, rebase dan eerst de branch op `main`. Dan fast-forward naar `main`, `main` pushen en de branch weghalen. Branches blijven lokaal; alleen `main` gaat naar GitHub.
-5. **Controleren:** kijk een paar minuten na de merge of https://agenticbeagle.com de nieuwe versie toont, en zeg in gewone taal wat er live staat.
+5. **Controleren:** kijk een paar minuten na de merge of https://agenticbeagle.com de nieuwe versie toont, en zeg in gewone taal wat er live staat. Stop daarna de lokale server.
 
 **Eerst laten meekijken (optioneel):** vraagt degene die werkt daarom, push dan de branch en open een pull request met een korte uitleg in gewone taal (`gh pr create`). De ander bekijkt hem op GitHub en merget met "Rebase and merge"; GitHub haalt de branch daarna weg. Haal dan lokaal `main` op en verwijder de lokale branch.
 
