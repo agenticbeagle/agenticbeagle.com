@@ -1,17 +1,19 @@
 # agenticbeagle.com
 
-De website van AgenticBeagle. Hij staat op GitHub Pages: de branch `main`, map `/`, met het eigen domein agenticbeagle.com (`CNAME`) en HTTPS. Er werken twee mensen aan, elk op een eigen Mac met een eigen GitHub-account (DevBeagle en HelloBeagle), allebei eigenaar van de organisatie AgenticBeagle.
+De website van AgenticBeagle. Hij staat op GitHub Pages: de branch `main`, map `/docs`, met het eigen domein agenticbeagle.com (`CNAME`) en HTTPS. Er werken twee mensen aan, elk op een eigen Mac met een eigen GitHub-account.
 
 ## Bestanden
 
-- `index.html`: de voorpagina. Alles zit in dit ene bestand: de CSS, de afbeeldingen en de drie lettertypes (Newsreader, Inter en JetBrains Mono; SIL Open Font License) staan er als base64 in. Er is geen JavaScript.
-- `privacy.html`: de privacypagina, in dezelfde stijl en met een eigen kopie van de lettertypes. Onderaan de voorpagina staat de link "Privacy".
-- `CNAME` (agenticbeagle.com) en `.nojekyll`: nodig voor GitHub Pages, niet weghalen.
+Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbestanden staan erbuiten en blijven daar. De repo is wel openbaar: alles wat erin staat, ook buiten `docs/`, is op GitHub te lezen. Zet dus nergens in de repo namen van mensen of accounts, privégegevens of iets wat niet openbaar mag.
+
+- `docs/index.html`: de voorpagina. Alles zit in dit ene bestand: de CSS, de afbeeldingen en de drie lettertypes (Newsreader, Inter en JetBrains Mono; SIL Open Font License) staan er als base64 in. Er is geen JavaScript.
+- `docs/privacy.html`: de privacypagina, in dezelfde stijl en met een eigen kopie van de lettertypes. Onderaan de voorpagina staat de link "Privacy".
+- `docs/CNAME` (agenticbeagle.com) en `docs/.nojekyll`: nodig voor GitHub Pages, niet weghalen.
 
 ## Regels
 
 - De site is alleen in het Engels.
-- Niets van andere servers laden: geen Google Fonts, CDN, analytics, embeds of cookies. Nieuwe afbeeldingen en lettertypes gaan als base64 in de pagina. De privacypagina belooft dat; verandert er iets aan wat de site verwerkt, pas dan ook `privacy.html` aan, met de datum bovenaan.
+- Niets van andere servers laden: geen Google Fonts, CDN, analytics, embeds of cookies. Nieuwe afbeeldingen en lettertypes gaan als base64 in de pagina. De privacypagina belooft dat; verandert er iets aan wat de site verwerkt, pas dan ook `docs/privacy.html` aan, met de datum bovenaan.
 - Geen persoonlijke namen, privé-adressen of privé-e-mailadressen, op de site en in commits. Het contactadres is hello@agenticbeagle.com.
 - AgenticBeagle is geen B.V.; schrijf dat nergens.
 - Commits als `AgenticBeagle <hello@agenticbeagle.com>`, niet onder de eigen accountnaam. Dat staat per kopie in `.git/config`; controleer het met `git config user.name` voor de eerste commit, en zet het na een verse `git clone` eerst:
@@ -26,7 +28,7 @@ De website van AgenticBeagle. Hij staat op GitHub Pages: de branch `main`, map `
 `main` is live: wat in `main` komt, staat binnen een minuut op agenticbeagle.com. Daarom gaat elke wijziging zo:
 
 1. **Begin:** `git switch main` en `git pull --ff-only`; de ander kan intussen iets live hebben gezet. Maak dan een branch met een korte Engelse naam in kebab-case, bijvoorbeeld `new-intro-text`. Eén wijziging per branch; nooit rechtstreeks op `main` werken.
-2. **Maken en bekijken:** pas de bestanden aan en bekijk het resultaat met `python3 -m http.server 8000` in deze map (http://localhost:8000/): beide pagina's, op desktopbreedte en op 375 px. Vertel wat er veranderd is.
+2. **Maken en bekijken:** pas de bestanden in `docs/` aan en bekijk het resultaat met `python3 -m http.server 8000 --directory docs` (http://localhost:8000/): beide pagina's, op desktopbreedte en op 375 px. Vertel wat er veranderd is.
 3. **"commit":** alleen op opdracht van wie aan het werk is, nooit uit eigen beweging. Commit op de branch, met een Nederlandse boodschap die zegt wat er veranderd is en waarom.
 4. **"merge":** ook alleen op opdracht. Haal `main` op; is `main` intussen veranderd, rebase dan eerst de branch op `main`. Dan fast-forward naar `main`, `main` pushen en de branch weghalen. Branches blijven lokaal; alleen `main` gaat naar GitHub.
 5. **Controleren:** kijk een paar minuten na de merge of https://agenticbeagle.com de nieuwe versie toont, en zeg in gewone taal wat er live staat.
@@ -35,7 +37,7 @@ De website van AgenticBeagle. Hij staat op GitHub Pages: de branch `main`, map `
 
 **Terugdraaien:** gaat er na een merge iets mis, maak dan een nieuwe branch, draai de foute commit terug met `git revert` en merge die op dezelfde manier. Nooit force-pushen of de geschiedenis van `main` herschrijven; GitHub blokkeert dat ook.
 
-Zonder server kan bekijken ook met `open index.html`, maar dan werkt de link van de privacypagina terug naar de voorpagina niet.
+Zonder server kan bekijken ook met `open docs/index.html`, maar dan werkt de link van de privacypagina terug naar de voorpagina niet.
 
 ## Afbeeldingen
 
