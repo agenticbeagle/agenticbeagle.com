@@ -8,12 +8,13 @@ Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbesta
 
 - `docs/index.html`: de voorpagina. Alles zit in dit ene bestand: de CSS, de afbeeldingen en de drie lettertypes (Newsreader, Inter en JetBrains Mono; SIL Open Font License) staan er als base64 in. Er is geen JavaScript.
 - `docs/privacy.html`: de privacypagina, in dezelfde stijl en met een eigen kopie van de lettertypes. Onderaan de voorpagina staat de link "Privacy".
+- `docs/kaartjes/`: de pagina's van de app Kaartjes, in de stijl van de app zelf (de kleuren van de app, de systeemletter van de iPhone, licht en donker) en niet in die van de voorpagina. Net als de rest van de site staat alles in de pagina zelf (CSS en afbeeldingen als base64). `index.html` is de app-pagina met de changelog ("What's new"), `support/index.html` de ondersteuning en `privacy/index.html` het privacybeleid van de app. De Nederlandse versies staan in `nl/`, `nl/support/` en `nl/privacy/`; bovenaan elke pagina wisselt een taalknop tussen de twee. Pas je de ene taal aan, doe dan de andere ook. Bij een nieuwe versie van Kaartjes komt er bovenaan de changelog een blok bij, in beide talen. Er staat bewust geen prijs op ("gratis"), want die ligt nog niet vast.
+- Kaartjes is een soft launch: de pagina's staan live, maar de voorpagina linkt er (nog) niet naartoe. Zet die link er pas bij als daarom wordt gevraagd. De app is Nederlands en linkt het best naar `/kaartjes/nl/privacy/` en `/kaartjes/nl/support/`; de Engelse paden `/kaartjes/privacy/` en `/kaartjes/support/` blijven ook bestaan.
 - `docs/CNAME` (agenticbeagle.com) en `docs/.nojekyll`: nodig voor GitHub Pages, niet weghalen.
-- `docs/kaartjes/`: de pagina's van de app Kaartjes (`index.html`, `privacy/`, `support/`), met eigen stijl `kaartjes.css` en afbeeldingen in `images/`. Overgenomen op 27 oktober 2026 uit de nooit gepubliceerde repo agenticbeagle.nl, nog in het Nederlands; de tekst wordt Engels en de pagina's krijgen de stijl van de rest van de site. De app linkt naar `/kaartjes/privacy/` en `/kaartjes/support/`; die paden liggen vast.
 
 ## Regels
 
-- De site is alleen in het Engels.
+- De site is in het Engels. Alleen de Kaartjes-pagina's staan er ook in het Nederlands, omdat de app Nederlands is en alleen in Nederland te krijgen is.
 - Niets van andere servers laden: geen Google Fonts, CDN, analytics, embeds of cookies. Nieuwe afbeeldingen en lettertypes gaan als base64 in de pagina. De privacypagina belooft dat; verandert er iets aan wat de site verwerkt, pas dan ook `docs/privacy.html` aan, met de datum bovenaan.
 - Geen persoonlijke namen, privé-adressen of privé-e-mailadressen, op de site en in commits. Het contactadres is hello@agenticbeagle.com.
 - AgenticBeagle is een B.V., ingeschreven bij de KvK onder nummer 42090573. De volledige naam "AgenticBeagle B.V." staat bij ENTITY op de voorpagina, in de footer (met het KvK-nummer, naast Privacy) en bij "Who we are" op de privacypagina; in lopende tekst blijft het gewoon AgenticBeagle.
