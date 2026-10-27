@@ -9,6 +9,7 @@ Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbesta
 - `docs/index.html`: de voorpagina. Alles zit in dit ene bestand: de CSS, de afbeeldingen en de drie lettertypes (Newsreader, Inter en JetBrains Mono; SIL Open Font License) staan er als base64 in. Er is geen JavaScript.
 - `docs/privacy.html`: de privacypagina, in dezelfde stijl en met een eigen kopie van de lettertypes. Onderaan de voorpagina staat de link "Privacy".
 - `docs/CNAME` (agenticbeagle.com) en `docs/.nojekyll`: nodig voor GitHub Pages, niet weghalen.
+- `docs/kaartjes/`: de pagina's van de app Kaartjes (`index.html`, `privacy/`, `support/`), met eigen stijl `kaartjes.css` en afbeeldingen in `images/`. Overgenomen op 27 oktober 2026 uit de nooit gepubliceerde repo agenticbeagle.nl, nog in het Nederlands; de tekst wordt Engels en de pagina's krijgen de stijl van de rest van de site. De app linkt naar `/kaartjes/privacy/` en `/kaartjes/support/`; die paden liggen vast.
 
 ## Regels
 

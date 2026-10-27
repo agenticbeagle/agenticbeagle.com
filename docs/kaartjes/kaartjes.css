@@ -1,0 +1,92 @@
+/* Kaartjes: the pages under /kaartjes, in the colours of the app. */
+:root {
+  color-scheme: light dark;
+  --accent: #c2410c;
+  --on-accent: #ffffff;
+  --bg: #ffffff;
+  --card: #f4f4f5;
+  --text: #18181b;
+  --muted: #5b5b63;
+  --line: #e4e4e7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #fb923c;
+    --on-accent: #1c1917;
+    --bg: #0c0a09;
+    --card: #1c1917;
+    --text: #fafaf9;
+    --muted: #a8a29e;
+    --line: #292524;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+a { color: var(--accent); }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+.topbar { padding: 18px 0 0; font-size: 15px; }
+.topbar a { text-decoration: none; color: var(--muted); }
+
+/* Landing page */
+.hero { text-align: center; padding: 44px 0 20px; }
+.hero .icon { width: 128px; height: 128px; border-radius: 29px; box-shadow: 0 10px 30px rgba(0, 0, 0, .14); }
+.hero h1 { font-size: 42px; letter-spacing: -.02em; margin: 22px 0 8px; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin: 0 auto 26px; max-width: 34ch; }
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.3;
+}
+.cta small { display: block; font-weight: 400; font-size: 13px; opacity: .85; }
+.shots {
+  display: flex;
+  gap: 18px;
+  padding: 28px 20px 8px;
+  margin: 0 -20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.shots::-webkit-scrollbar { display: none; }
+.shots figure { flex: 0 0 auto; width: 220px; margin: 0; scroll-snap-align: center; text-align: center; }
+.shots img { width: 220px; height: auto; border-radius: 26px; border: 1px solid var(--line); display: block; }
+.shots figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+@media (min-width: 760px) { .shots { justify-content: center; overflow: visible; } }
+.features { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 28px 0 8px; }
+@media (min-width: 560px) { .features { grid-template-columns: 1fr 1fr; } }
+.feature { background: var(--card); border-radius: 20px; padding: 20px 20px 18px; }
+.feature h2 { font-size: 19px; margin: 0 0 6px; letter-spacing: -.01em; }
+.feature p { margin: 0; color: var(--muted); }
+.more { text-align: center; margin: 28px 0 0; color: var(--muted); }
+
+/* Text pages */
+.page { padding: 28px 0 8px; }
+.page h1 { font-size: 34px; letter-spacing: -.02em; margin: 0 0 6px; }
+.page .meta { color: var(--muted); margin: 0 0 24px; }
+.page h2 { font-size: 22px; letter-spacing: -.01em; margin: 34px 0 8px; }
+.page p, .page li { color: var(--text); }
+.page .lead { font-size: 19px; }
+details { border-top: 1px solid var(--line); padding: 14px 0; }
+details:last-of-type { border-bottom: 1px solid var(--line); }
+summary { font-weight: 600; font-size: 18px; cursor: pointer; }
+details p { color: var(--muted); margin: 10px 0 0; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95em; }
+
+footer { border-top: 1px solid var(--line); margin-top: 44px; padding: 26px 0 44px; color: var(--muted); font-size: 15px; text-align: center; }
+footer nav { margin-bottom: 10px; }
+footer nav a { margin: 0 10px; text-decoration: none; }
+footer p { margin: 4px 0; }
