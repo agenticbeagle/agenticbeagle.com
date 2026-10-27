@@ -16,7 +16,7 @@ Alleen wat in `docs/` staat, komt op de website. Dit bestand en andere werkbesta
 - De site is alleen in het Engels.
 - Niets van andere servers laden: geen Google Fonts, CDN, analytics, embeds of cookies. Nieuwe afbeeldingen en lettertypes gaan als base64 in de pagina. De privacypagina belooft dat; verandert er iets aan wat de site verwerkt, pas dan ook `docs/privacy.html` aan, met de datum bovenaan.
 - Geen persoonlijke namen, privé-adressen of privé-e-mailadressen, op de site en in commits. Het contactadres is hello@agenticbeagle.com.
-- AgenticBeagle is een B.V.; maar schrijf AgenticBeagle
+- AgenticBeagle is een B.V., ingeschreven bij de KvK onder nummer 42090573. De volledige naam "AgenticBeagle B.V." staat bij ENTITY op de voorpagina, in de footer (met het KvK-nummer, naast Privacy) en bij "Who we are" op de privacypagina; in lopende tekst blijft het gewoon AgenticBeagle.
 - De merknaam staat in kleine letters met punt: `agenticbeagle.` (logo, voettekst, tabbladtitels, deeltitels). In lopende tekst en bij © blijft het `AgenticBeagle`. Verander dat niet zonder te vragen.
 - Commits als `AgenticBeagle <hello@agenticbeagle.com>`, niet onder de eigen accountnaam. Dat staat per kopie in `.git/config`; controleer het met `git config user.name` voor de eerste commit, en zet het na een verse `git clone` eerst:
   ```bash
